@@ -52,6 +52,7 @@ type Nodes = NodeA | NodeB | NodeC
 type ReplacedNodes = ReplacedNodeA | ReplacedNodeB | ReplacedNodeC
 type NodesNoName = NoNameNodeA | NoNameNodeC | NodeB
 
+// type HH = ReplaceKeys<Nodes, 'name' | 'flag', { name: number, flag: string }>
 type cases = [
   Expect<Equal<ReplaceKeys<Nodes, 'name' | 'flag', { name: number, flag: string }>, ReplacedNodes>>,
   Expect<Equal<ReplaceKeys<Nodes, 'name', { aa: number }>, NodesNoName>>,
